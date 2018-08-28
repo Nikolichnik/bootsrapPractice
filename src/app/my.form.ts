@@ -11,15 +11,6 @@ import { DataService } from './data.service';
     templateUrl: './my.form.html'
 })
 
-// @NgModule({
-//     declarations: [
-//         myForm
-//     ],
-//     exports: [
-//         myForm
-//     ]
-// })
-
 export class myForm implements OnInit {
 
     private person = new Person;
