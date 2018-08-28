@@ -42,7 +42,7 @@ export class myForm implements OnInit {
 
         this.person = new Person;
 
-        console.log('possibly added person ' + this.message.length);
+        // console.log('possibly added person ' + this.message.length);
     }
 
     public clear(empForm: any, event: Event) {
