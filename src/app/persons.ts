@@ -1,22 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
+
 import { Person } from './person';
 
 @Component({
-    selector: 'persons'
+    selector: 'persons',
+    templateUrl: './persons.html'
 })
 
 export class Persons {
-    person: Person = {
-        email: 'person@mail.com',
-        pass: 'makeAbetterPassword',
-        address: '1234 NotMainSt',
-        address2: '1235 NotMainSt',
-        city: 'Bumblegrad',
-        state: 'Neverland',
-        zip: 11000
-    };
 
-    constructor() {
+    message: Person[];
 
+    constructor(private data: DataService) {
+        
     }
+
+    ngOnInit() {
+        this.data.currentMessage.subscribe( message => this.message = message);
+    }
+    
 }

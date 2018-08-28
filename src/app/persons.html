@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">ZIP</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of message; let i = index">
+            <th scope="row">{{[i + 1]}}</th>
+            <td>{{person.name}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.address}}</td>
+            <td>{{person.city}}</td>
+            <td>{{person.state | uppercase}}</td>
+            <td>{{person.zip}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<hr>
+<br>
